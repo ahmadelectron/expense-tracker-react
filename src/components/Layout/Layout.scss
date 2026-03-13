@@ -1,0 +1,133 @@
+.main-header {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse; // برای چیدمان راست‌چین درست
+  }
+
+  .user-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .welcome-text {
+      color: #a0aec0;
+      font-size: 0.95rem;
+      .user-name {
+        color: #fff;
+        font-weight: 600;
+        margin: 0 5px;
+      }
+    }
+
+    .logout-btn {
+      background: rgba(239, 68, 68, 0.15);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 6px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: #ef4444;
+        color: #fff;
+      }
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 15px;
+
+    .nav-link {
+      color: #a0aec0;
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #0075ff 0%, #00adff 100%);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 117, 255, 0.3);
+      }
+    }
+  }
+}
+
+// .layout-container {
+//   display: flex;
+//   min-height: 100vh;
+
+//   .header {
+//     width: 260px;
+//     background: var(--bg-color);
+//     border-right: 1px solid var(--card-border);
+//     padding: 20px;
+
+//     .nav-link {
+//       display: flex;
+//       align-items: center;
+//       padding: 12px;
+//       color: var(--text-muted);
+//       text-decoration: none;
+//       border-radius: 12px;
+//       margin-bottom: 8px;
+
+//       &.active {
+//         background: var(--card-bg);
+//         color: white;
+//       }
+//     }
+//   }
+
+//   .main-content {
+//     flex: 1;
+//     overflow-y: auto;
+//     background-image: radial-gradient(
+//       at 0% 0%,
+//       rgba(0, 117, 255, 0.05) 0%,
+//       transparent 50%
+//     );
+//   }
+// }
+
+// // متغیرها را همین‌جا تعریف می‌کنیم (یا بعداً در یک فایل global)
+// $primary-color: #4f46e5;
+
+// .layout-container {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+//   font-family: "Tahoma", sans-serif;
+
+//   .header {
+//     background-color: $primary-color;
+//     color: white;
+//     padding: 1rem;
+//     text-align: center;
+//   }
+
+//   .main-content {
+//     flex: 1;
+//     padding: 20px;
+//     background-color: #f3f4f6;
+//   }
+// }

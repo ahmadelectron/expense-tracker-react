@@ -1,0 +1,39 @@
+.chart-wrapper {
+  h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  .recharts-legend-item-text {
+    margin-right: 5px;
+    color: #a0a5ba !important;
+  }
+}
+
+// .dashboard-page {
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 20px;
+
+//   // چیدمان در دسکتاپ (دو ستونه)
+//   .dashboard-grid {
+//     display: grid;
+//     grid-template-columns: 1fr 1.5fr; // ستون اول برای فرم و نمودار، ستون دوم برای لیست
+//     gap: 30px;
+//     align-items: start;
+//   }
+
+//   // چیدمان در موبایل و تبلت (تک ستونه)
+//   @media (max-width: 768px) {
+//     .dashboard-grid {
+//       grid-template-columns: 1fr; // همه زیر هم قرار می‌گیرند
+//       gap: 20px;
+//     }
+
+//     h1 {
+//       font-size: 1.5rem;
+//       text-align: center;
+//     }
+//   }
+// }

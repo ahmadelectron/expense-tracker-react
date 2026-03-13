@@ -1,0 +1,173 @@
+.transaction-list {
+  // کادر اصلی لیست
+  padding: 10px;
+
+  .filter-bar {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+
+    input,
+    select {
+      background: rgba(0, 0, 0, 0.3) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      color: #ffffff !important;
+      border-radius: 10px;
+      padding: 10px;
+      flex: 1;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      option {
+        background: #0b1437;
+        color: white;
+      }
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    // تغییر کارت از سفید به شیشه‌ای تیره
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 12px;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.01);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    // نوارهای رنگی کنار کارت
+    border-right: 5px solid #ccc;
+    &.income-item {
+      border-right-color: #10b981;
+    }
+    &.expense-item {
+      border-right-color: #ef4444;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      strong {
+        color: #ffffff; // نام تراکنش حتماً سفید و واضح باشد
+        font-size: 1.1rem;
+      }
+
+      span {
+        color: #a0aec0; // تاریخ و دسته خاکستری روشن (خوانا روی تیره)
+        font-size: 0.85rem;
+      }
+    }
+
+    .amount-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .amount {
+        font-weight: bold;
+        color: #fff;
+        font-size: 1rem;
+      }
+
+      .delete-btn {
+        background: rgba(239, 68, 68, 0.2);
+        color: #ef4444;
+        border: 1px solid #ef4444;
+        padding: 5px 12px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-size: 0.8rem;
+        transition: 0.3s;
+
+        &:hover {
+          background: #ef4444;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.transaction-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+// .transaction-list {
+//   margin-top: 20px;
+//   ul {
+//     list-style: none;
+//     padding: 0;
+//   }
+//   li {
+//     background: white;
+//     margin-bottom: 10px;
+//     padding: 15px;
+//     display: flex;
+//     justify-content: space-between;
+//     border-right: 5px solid #ccc;
+//     border-radius: 4px;
+
+//     &.income-item {
+//       border-right-color: #10b981;
+//     } // سبز برای درآمد
+//     &.expense-item {
+//       border-right-color: #ef4444;
+//     } // قرمز برای هزینه
+
+//     .info {
+//       display: flex;
+//       flex-direction: column;
+//       span {
+//         font-size: 0.8rem;
+//         color: #666;
+//       }
+//     }
+
+//     button {
+//       background: #ff4d4d;
+//       color: white;
+//       border: none;
+//       padding: 5px 10px;
+//       cursor: pointer;
+//       border-radius: 3px;
+//       margin-right: 10px;
+//     }
+//   }
+// }
+
+// .filter-bar {
+//   display: flex;
+//   gap: 10px;
+//   margin-bottom: 15px;
+
+//   input {
+//     flex: 2;
+//     padding: 8px;
+//     border: 1px solid #ddd;
+//     border-radius: 4px;
+//   }
+
+//   select {
+//     flex: 1;
+//     padding: 8px;
+//     border: 1px solid #ddd;
+//     border-radius: 4px;
+//   }
+// }

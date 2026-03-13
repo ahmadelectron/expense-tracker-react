@@ -1,0 +1,484 @@
+.transaction-form {
+  background-color: #1a1d2d; // رنگ تیره پس‌زمینه مطابق عکس
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+
+  .form-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #2d324a;
+    padding-bottom: 15px;
+  }
+
+  .form-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // ایجاد دو ستون مساوی
+    gap: 20px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      label {
+        font-size: 0.9rem;
+        color: #a0a5ba;
+      }
+
+      input,
+      select {
+        background-color: #121420;
+        border: 1px solid #2d324a;
+        padding: 12px;
+        border-radius: 8px;
+        color: white;
+        outline: none;
+
+        &:focus {
+          border-color: #007bff;
+        }
+      }
+
+      .error-msg {
+        color: #ff4d4d;
+        font-size: 0.8rem;
+      }
+    }
+
+    .full-width {
+      grid-column: span 2; // اشغال هر دو ستون برای بخش دسته‌بندی
+      // justify-content: space-between;
+      // align-items: center;
+    }
+  }
+
+  .category-adder {
+    display: flex;
+    gap: 10px;
+
+    select {
+      flex: 1;
+    }
+
+    .add-cat-input-box {
+      display: flex;
+      gap: 5px;
+      background: #121420;
+      border: 1px solid #2d324a;
+      border-radius: 8px;
+      padding-right: 5px;
+
+      input {
+        border: none;
+        width: 120px;
+      }
+    }
+  }
+}
+
+/* تنظیمات اختصاصی برای ورودی تاریخ در تم تیره */
+input[type="date"] {
+  position: relative;
+  color: white; // رنگ متن تاریخ
+  // text-align: ; // برای همخوانی با زبان فارسی
+
+  // تغییر استایل آیکون تقویم (که در مرورگرها به صورت پیش‌فرض مشکی است)
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(100%) contrast(100%); // آیکون را کاملاً سفید می‌کند
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  // حذف فلش‌های پیش‌فرض در برخی مرورگرها (اختیاری)
+  &::-webkit-inner-spin-button,
+  &::-webkit-clear-button {
+    display: none;
+  }
+}
+
+// // برای اینکه فیلد تاریخ هم قد بقیه فیلدها باشد
+// .form-group input[type="date"] {
+//   height: 46px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   flex-direction: row-reverse; // آیکون تقویم را سمت راست می‌برد
+// }
+
+// .transaction-form {
+//   // ۱. هدر شامل عنوان و دکمه ثبت
+//   .form-header {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     margin-bottom: 20px;
+//     padding-bottom: 15px;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+//     .form-title {
+//       margin: 0;
+//       font-size: 1.1rem;
+//       color: #fff;
+//       font-weight: 700;
+//     }
+
+//     .submit-btn-top {
+//       background: linear-gradient(135deg, #0075ff 0%, #00adff 100%);
+//       color: white;
+//       border: none;
+//       padding: 8px 18px;
+//       border-radius: 10px;
+//       font-size: 0.85rem;
+//       font-weight: bold;
+//       cursor: pointer;
+//       transition: all 0.3s;
+//       box-shadow: 0 4px 12px rgba(0, 117, 255, 0.2);
+
+//       &:hover {
+//         transform: translateY(-2px);
+//         filter: brightness(1.1);
+//         box-shadow: 0 6px 15px rgba(0, 117, 255, 0.4);
+//       }
+//     }
+//   }
+
+//   // ۲. بدنه فرم (چیدمان دو ستونه)
+//   .form-body {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr;
+//     gap: 15px;
+
+//     @media (max-width: 600px) {
+//       grid-template-columns: 1fr;
+//     }
+//   }
+
+//   // ۳. استایل گروه‌های فرم و ورودی‌ها
+//   .form-group {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: right;
+
+//     label {
+//       color: #a0aec0;
+//       margin-bottom: 8px;
+//       font-size: 0.85rem;
+//       font-weight: 500;
+//     }
+
+//     input,
+//     select {
+//       background: rgba(0, 0, 0, 0.25) !important;
+//       border: 1px solid rgba(255, 255, 255, 0.1) !important;
+//       color: #ffffff !important;
+//       padding: 12px !important;
+//       border-radius: 10px;
+//       width: 100%;
+//       font-family: inherit;
+//       box-sizing: border-box;
+
+//       &:focus {
+//         border-color: #0075ff !important;
+//         outline: none;
+//         background: rgba(0, 0, 0, 0.35) !important;
+//       }
+
+//       &::placeholder {
+//         color: rgba(255, 255, 255, 0.3);
+//       }
+//       option {
+//         background: #0b1437;
+//         color: white;
+//       }
+//     }
+
+//     // ۴. استایل بخش جدید «افزودن دسته‌بندی سفارشی»
+//     .category-adder {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 10px;
+
+//       // داخل بخش .category-adder در فایل TransactionForm.scss
+//       .add-cat-input-box {
+//         display: flex;
+//         gap: 8px;
+//         margin-top: 10px;
+//         align-items: stretch;
+
+//         input {
+//           flex: 2;
+//           background: rgba(
+//             0,
+//             0,
+//             0,
+//             0.4
+//           ) !important; // تیره کردن پس‌زمینه اینپوت برای تضاد بیشتر
+//           border: 1px solid rgba(255, 255, 255, 0.2) !important;
+//           border-radius: 10px !important;
+//           color: #ffffff !important;
+//           font-size: 0.85rem !important;
+//           padding: 10px 15px !important;
+
+//           &:focus {
+//             border-color: #0075ff !important;
+//             background: rgba(0, 0, 0, 0.5) !important;
+//           }
+//         }
+
+//         button {
+//           flex: 1;
+//           // استفاده از رنگ تخت و درخشان به جای شفاف برای خوانایی ۱۰۰٪
+//           background: #0075ff;
+//           color: #ffffff;
+//           border: none;
+//           border-radius: 10px;
+//           font-size: 0.85rem;
+//           font-weight: 800; // ضخیم کردن متن
+//           cursor: pointer;
+//           transition: all 0.3s ease;
+//           box-shadow: 0 4px 15px rgba(0, 117, 255, 0.3); // درخشش ثابت
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+
+//           &:hover {
+//             background: #00adff; // تغییر رنگ در هاور به آبی روشن‌تر
+//             box-shadow: 0 6px 20px rgba(0, 173, 255, 0.5);
+//             transform: translateY(-2px);
+//           }
+
+//           &:active {
+//             transform: translateY(0);
+//           }
+//         }
+//       }
+//     }
+
+//     .error-msg {
+//       color: #ff4d4d;
+//       font-size: 0.75rem;
+//       margin-top: 5px;
+//     }
+//   }
+// }
+
+// .transaction-form {
+//   // هدر شامل عنوان و دکمه
+//   .form-header {
+//     display: flex;
+//     justify-content: space-between; // قرار دادن در دو سمت مخالف
+//     align-items: center;
+//     margin-bottom: 20px;
+//     padding-bottom: 15px;
+//     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+//     .form-title {
+//       margin: 0;
+//       font-size: 1.1rem;
+//       color: #fff;
+//       font-weight: 700;
+//     }
+
+//     .submit-btn-top {
+//       background: linear-gradient(135deg, #0075ff 0%, #00adff 100%);
+//       color: white;
+//       border: none;
+//       padding: 8px 18px;
+//       border-radius: 10px;
+//       font-size: 0.85rem;
+//       font-weight: bold;
+//       cursor: pointer;
+//       transition: all 0.3s;
+//       box-shadow: 0 4px 12px rgba(0, 117, 255, 0.2);
+
+//       &:hover {
+//         transform: translateY(-2px);
+//         filter: brightness(1.1);
+//         box-shadow: 0 6px 15px rgba(0, 117, 255, 0.4);
+//       }
+//     }
+//   }
+
+//   // بدنه فرم به صورت دو ستونه
+//   .form-body {
+//     display: grid;
+//     grid-template-columns: 1fr 1fr; // دو ستون برابر
+//     gap: 15px;
+
+//     @media (max-width: 600px) {
+//       grid-template-columns: 1fr; // در موبایل تک ستونه
+//     }
+//   }
+
+//   .form-group {
+//     display: flex;
+//     flex-direction: column;
+//     text-align: right;
+
+//     label {
+//       color: #a0aec0;
+//       margin-bottom: 8px;
+//       font-size: 0.85rem;
+//       font-weight: 500;
+//     }
+
+//     input,
+//     select {
+//       background: rgba(0, 0, 0, 0.25) !important;
+//       border: 1px solid rgba(255, 255, 255, 0.1) !important;
+//       color: #ffffff !important;
+//       padding: 12px !important;
+//       border-radius: 10px;
+//       width: 100%;
+//       font-family: inherit;
+//       box-sizing: border-box;
+
+//       &:focus {
+//         border-color: #0075ff !important;
+//         outline: none;
+//       }
+
+//       &::placeholder {
+//         color: rgba(255, 255, 255, 0.3);
+//       }
+//       option {
+//         background: #0b1437;
+//         color: white;
+//       }
+//     }
+
+//     .error-msg {
+//       color: #ff4d4d;
+//       font-size: 0.75rem;
+//       margin-top: 5px;
+//     }
+//   }
+// }
+
+// src/components/TransactionForm/TransactionForm.scss
+// .transaction-form {
+//   input,
+//   select {
+//     background: rgba(0, 0, 0, 0.3) !important;
+//     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+//     color: #ffffff !important; // متن حتماً سفید
+//     padding: 10px !important;
+//     margin-bottom: 15px;
+//     width: 100%;
+//     border-radius: 8px;
+
+//     &::placeholder {
+//       color: rgba(255, 255, 255, 0.6);
+//     }
+//   }
+
+//   label {
+//     color: #a0aec0;
+//     display: block;
+//     margin-bottom: 5px;
+//     font-size: 0.9rem;
+//   }
+// }
+
+// // src/components/TransactionForm/TransactionForm.scss
+// .transaction-form {
+//   input,
+//   select {
+//     width: 100%;
+//     background: rgba(0, 0, 0, 0.2) !important; // پس‌زمینه تیره‌تر برای تضاد
+//     border: 1px solid rgba(255, 255, 255, 0.2) !important;
+//     border-radius: 8px !important;
+//     color: #ffffff !important; // رنگ متن حتماً سفید باشد
+//     padding: 12px !important;
+//     font-family: inherit;
+//     margin-bottom: 5px;
+
+//     &::placeholder {
+//       color: rgba(255, 255, 255, 0.5); // رنگ کمرنگ برای راهنمای داخل کادر
+//     }
+
+//     option {
+//       background-color: #0b1437; // پس‌زمینه دراپ‌دان در حالت انتخاب
+//       color: white;
+//     }
+//   }
+
+//   label {
+//     color: #a0aec0;
+//     font-size: 0.85rem;
+//     margin-bottom: 5px;
+//     display: block;
+//   }
+// }
+
+// .transaction-form {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 15px;
+//   background: white;
+//   padding: 20px;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+//   .form-group {
+//     display: flex;
+//     flex-direction: column;
+
+//     input,
+//     select {
+//       padding: 8px;
+//       border: 1px solid #ddd;
+//       border-radius: 4px;
+//     }
+
+//     .error-msg {
+//       color: red;
+//       font-size: 0.8rem;
+//       margin-top: 4px;
+//     }
+//   }
+
+//   button {
+//     background-color: #4f46e5;
+//     color: white;
+//     padding: 10px;
+//     border: none;
+//     border-radius: 4px;
+//     cursor: pointer;
+//     &:hover {
+//       background-color: #4338ca;
+//     }
+//   }
+// }
+
+// button {
+//   background: var(--primary-gradient);
+//   border-radius: 12px;
+//   border: none;
+//   color: white;
+//   font-weight: bold;
+//   padding: 12px 24px;
+//   cursor: pointer;
+//   transition: transform 0.2s;
+
+//   &:hover {
+//     transform: translateY(-2px);
+//     box-shadow: 0 4px 15px rgba(0, 117, 255, 0.4);
+//   }
+// }
+
+// input,
+// select {
+//   background: rgba(15, 21, 53, 0.5) !important;
+//   border: 1px solid var(--card-border) !important;
+//   border-radius: 12px !important;
+//   color: white !important;
+//   padding: 12px !important;
+
+//   &::placeholder {
+//     color: var(--text-muted);
+//   }
+// }
