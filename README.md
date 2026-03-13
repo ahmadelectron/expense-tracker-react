@@ -1,6 +1,7 @@
 # 💰 Expense Tracker | مدیریت مالی شخصی
 
 [English](#english) | [فارسی](#فارسی)
+<img width="992" height="912" alt="Annotation 2026-03-13 221142" src="https://github.com/user-attachments/assets/e794f4b9-f045-456a-959a-dbcf840e0292" />
 
 ---
 
