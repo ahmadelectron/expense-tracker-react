@@ -1,16 +1,45 @@
-# React + Vite
+# 💰 Expense Tracker | مدیریت مالی شخصی
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[English](#english) | [فارسی](#فارسی)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<a name="english"></a>
+## 🇬🇧 English
 
-## React Compiler
+A modern, responsive personal finance management application built with **React**. This tool helps users track their incomes and expenses with dynamic categories and visual data representation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### ✨ Features:
+- **Transaction Management:** Add, delete, and view transactions with title, amount, and date.
+- **Dynamic Categories:** Create custom categories on the fly.
+- **Visual Analytics:** Interactive Pie Chart for expense distribution using **Recharts**.
+- **Advanced Filtering:** Filter transactions by category and search by title.
+- **Data Persistence:** Uses **LocalStorage** to keep your data safe in the browser.
 
-## Expanding the ESLint configuration
+### 🛠 Tech Stack:
+- **Frontend:** React.js
+- **State Management:** Context API
+- **Form Handling:** React Hook Form & Yup (Validation)
+- **Charts:** Recharts
+- **Styling:** SCSS (Modular)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+<a name="فارسی"></a>
+## 🇮🇷 فارسی
+
+یک اپلیکیشن مدرن و واکنش‌گرا برای مدیریت منابع مالی شخصی که با **React** توسعه یافته است. این ابزار به کاربران کمک می‌کند تا درآمدها و هزینه‌های خود را با دسته‌بندی‌های دلخواه و نمایش بصری داده‌ها مدیریت کنند.
+
+### ✨ ویژگی‌ها:
+- **مدیریت تراکنش‌ها:** ثبت، حذف و مشاهده تراکنش‌ها شامل عنوان، مبلغ و تاریخ.
+- **دسته‌بندی‌های داینامیک:** امکان افزودن دسته‌بندی‌های جدید و شخصی‌سازی شده توسط کاربر.
+- **تحلیل بصری:** نمودار دایره‌ای تعاملی برای نمایش سهم هزینه‌ها با استفاده از **Recharts**.
+- **فیلتر پیشرفته:** قابلیت فیلتر بر اساس دسته‌بندی و جستجوی متنی در عناوین.
+- **ماندگاری داده‌ها:** استفاده از **LocalStorage** برای ذخیره اطلاعات در مرورگر بدون نیاز به دیتابیس.
+
+### 🛠 تکنولوژی‌های مورد استفاده:
+- **فرانت‌اند:** React.js
+- **مدیریت وضعیت:** Context API
+- **مدیریت فرم‌ها:** React Hook Form و Yup برای اعتبارسنجی
+- **نمودارها:** Recharts
+- **استایل‌دهی:** SCSS به صورت ماژولار
