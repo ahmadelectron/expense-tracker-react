@@ -1,79 +1,36 @@
-# React + Vite
+# Expense Tracker - Redux Version 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+یک اپلیکیشن حرفه‌ای مدیریت هزینه‌ها که با **React** و **Redux Toolkit** بازنویسی شده است. این پروژه دارای سیستم احراز هویت، نمودارهای تحلیلی و قابلیت مدیریت داده‌ها با اکسل است.
 
-Currently, two official plugins are available:
+## ✨ قابلیت‌های کلیدی (Features)
+- **State Management:** مدیریت وضعیت پیشرفته با Redux Toolkit.
+- **Authentication:** سیستم ثبت‌نام و ورود کاربر (AuthContext Refactored).
+- **Data Export/Import:** خروجی گرفتن از تراکنش‌ها در قالب فایل **Excel** و وارد کردن مجدد داده‌ها.
+- **Charts:** تحلیل بصری درآمدها و هزینه‌ها با استفاده از Recharts.
+- **Modern UI:** رابط کاربری مدرن با استفاده از Sass و طراحی Sidebar برای تنظیمات.
+- **Responsive:** کاملاً واکنش‌گرا برای موبایل و دسکتاپ.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠 تکنولوژی‌های استفاده شده (Tech Stack)
+- React.js
+- Redux Toolkit (Slices, Store)
+- React Router DOM
+- Recharts (نمودارها)
+- XLSX (مدیریت فایل اکسل)
+- Sass (استایل‌دهی)
+- React Hook Form & Yup (مدیریت فرم‌ها و اعتبارسنجی)
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-
-```
-expense-tracker
-├─ eslint.config.js
-├─ index.html
-├─ package.json
-├─ public
-│  ├─ favicon.svg
-│  └─ icons.svg
-├─ README.md
-├─ src
-│  ├─ App.css
-│  ├─ App.jsx
-│  ├─ assets
-│  │  ├─ hero.png
-│  │  ├─ react.svg
-│  │  └─ vite.svg
-│  ├─ components
-│  │  ├─ Balance
-│  │  │  ├─ Balance.jsx
-│  │  │  └─ Balance.scss
-│  │  ├─ Button
-│  │  │  ├─ Button.jsx
-│  │  │  └─ Button.scss
-│  │  ├─ ExpenseChart
-│  │  │  ├─ ExpenseChart.jsx
-│  │  │  └─ ExpenseChart.scss
-│  │  ├─ FinanceChart
-│  │  │  ├─ FinanceChart.jsx
-│  │  │  └─ FinanceChart.scss
-│  │  ├─ Layout
-│  │  │  ├─ Layout.jsx
-│  │  │  └─ Layout.scss
-│  │  ├─ ProtectedRoute
-│  │  │  └─ ProtectedRoute.jsx
-│  │  ├─ TransactionForm
-│  │  │  ├─ TransactionForm.jsx
-│  │  │  └─ TransactionForm.scss
-│  │  └─ TransactionList
-│  │     ├─ TransactionList.jsx
-│  │     └─ TransactionList.scss
-│  ├─ context
-│  │  ├─ AuthContext.jsx
-│  │  └─ TransactionContext.jsx
-│  ├─ hooks
-│  │  └─ useFinanceStats.js
-│  ├─ index.css
-│  ├─ main.jsx
-│  ├─ pages
-│  │  ├─ Dashboard
-│  │  │  ├─ Dashboard.jsx
-│  │  │  └─ Dashboard.scss
-│  │  ├─ Register
-│  │  │  ├─ Register.jsx
-│  │  │  └─ Register.scss
-│  │  └─ TransactionDetail
-│  │     ├─ TransactionDetail.jsx
-│  │     └─ TransactionDetail.scss
-│  └─ utils
-│     └─ constants.js
-└─ vite.config.js
+## 🚀 راه اندازی پروژه (Installation)
 
 ```
+git clone https://github.com
+cd expense-tracker-react
+git checkout redux-version
+npm install
+npm run dev
+```
+📈 ساختار پروژه (Project Structure)
+پروژه از معماری Feature-based استفاده می‌کند:
+src/store: شامل اسلایس‌های ریداکس (Auth & Transactions).
+src/components: کامپوننت‌های بازمصرف‌پذیر (Sidebar, Button, Charts).
+src/hooks: هوک‌های اختصاصی برای محاسبات مالی.
+
