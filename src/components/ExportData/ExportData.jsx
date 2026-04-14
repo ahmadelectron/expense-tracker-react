@@ -114,3 +114,5 @@ const ExportData = () => {
       </div>
     </div>
   );
+};
+export default ExportData;
