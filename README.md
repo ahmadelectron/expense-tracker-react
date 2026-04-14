@@ -1,3 +1,6 @@
+<img width="915" height="708" alt="Annotation 2026-04-14 225348" src="https://github.com/user-attachments/assets/82a68a31-79f5-4eb7-afa8-25a09b8797b2" />
+
+
 # Expense Tracker - Redux Version 🚀
 
 یک اپلیکیشن حرفه‌ای مدیریت هزینه‌ها که با **React** و **Redux Toolkit** بازنویسی شده است. این پروژه دارای سیستم احراز هویت، نمودارهای تحلیلی و قابلیت مدیریت داده‌ها با اکسل است.
