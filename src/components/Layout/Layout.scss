@@ -1,0 +1,73 @@
+.main-header {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+
+  .user-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .welcome-text {
+      color: #a0aec0;
+      font-size: 0.95rem;
+      .user-name {
+        color: #fff;
+        font-weight: 600;
+        margin: 0 5px;
+      }
+    }
+
+    .logout-btn {
+      background: rgba(239, 68, 68, 0.15);
+      color: #ef4444;
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      padding: 6px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        background: #ef4444;
+        color: #fff;
+      }
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 15px;
+
+    .nav-link {
+      color: #a0aec0;
+      text-decoration: none;
+      padding: 8px 20px;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      transition: 0.3s;
+
+      &:hover {
+        color: #fff;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      &.active {
+        background: linear-gradient(135deg, #0075ff 0%, #00adff 100%);
+        color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 117, 255, 0.3);
+      }
+    }
+  }
+}

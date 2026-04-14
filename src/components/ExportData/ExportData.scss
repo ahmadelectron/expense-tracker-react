@@ -1,0 +1,69 @@
+.export-sidebar-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  .section-group {
+    h4 {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+  }
+
+  .full-width-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px !important;
+    font-size: 0.95rem;
+  }
+
+  .divider {
+    border: 0;
+    border-top: 1px solid #f1f5f9;
+    margin: 10px 0;
+  }
+
+  .import-zone {
+    input {
+      display: none;
+    } 
+
+    .import-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: #f8fafc;
+
+      &:hover {
+        border-color: #3b82f6;
+        background: #eff6ff;
+        transform: translateY(-2px);
+      }
+
+      .upload-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+      }
+
+      span {
+        font-weight: 600;
+        color: #1e293b;
+        font-size: 0.9rem;
+      }
+
+      small {
+        color: #94a3b8;
+        font-size: 0.75rem;
+        margin-top: 4px;
+      }
+    }
+  }
+}

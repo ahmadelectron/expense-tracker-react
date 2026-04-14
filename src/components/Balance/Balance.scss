@@ -1,0 +1,37 @@
+.balance-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+
+  .balance-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h3,
+    h4 {
+      color: #a0aec0;
+      font-size: 0.85rem;
+      margin: 0;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0;
+      color: #fff;
+    }
+
+    &.income p {
+      color: #10b981;
+    }
+    &.expense p {
+      color: #ef4444;
+    }
+  }
+}
