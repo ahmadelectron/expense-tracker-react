@@ -25,7 +25,7 @@
 ## 🚀 راه اندازی پروژه (Installation)
 
 ```
-git clone https://github.com
+git clone [https://github.com/ahmadelectron/expense-tracker-react/tree/redux-version]
 cd expense-tracker-react
 git checkout redux-version
 npm install
